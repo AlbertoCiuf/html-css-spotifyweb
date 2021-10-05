@@ -21,7 +21,7 @@ body {
 aside {
   height: calc(100vh - 90px);
   width: 250px;
-  background-color:aquamarine;
+  background-color:#000;
   float: left;
 }
 
@@ -31,7 +31,7 @@ aside nav .logo {
 }
 
 aside nav .logo img {
-  height: 50px;
+  height: 60px;
 }
 
 aside nav ul {
@@ -39,7 +39,14 @@ aside nav ul {
 }
 
 aside nav ul li {
+  color: #676868;
+  padding: 10px;
   cursor: pointer;
+}
+
+aside nav ul li.active {
+  color: white;
+  border-left: 2px solid #B2FF36;
 }
 
 main {
