@@ -1,5 +1,49 @@
+/* GLOBAL */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+aside {
+  height: calc(100vh - 90px);
+  width: 300px;
+  background-color:aquamarine;
+  float: left;
+}
+
+
+main {
+  height: calc(100vh - 90px);
+  width: calc(100vw - 300px);
+  background-color: teal;
+  float: left;
+  overflow: auto;
+}
+
+section {
+  height: 90px;
+  width: calc(100vw - 300px);
+  position: fixed;
+  background-color: lightgrey;
+}
+
+section .button {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: grey;
 }
