@@ -62,6 +62,10 @@ aside nav .nav-top .menu img {
   vertical-align: middle;
 }
 
+aside nav .nav-top ul.playlists li{
+  padding-bottom: 10px;
+}
+
 aside nav ul li.active {
   color: white;
   border-left: 2px solid #B2FF36;
@@ -157,7 +161,41 @@ section .button a, section .button a:visited {
 .player {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 90px;
   background-color: #282828;
+}
+
+.player .player-left {
+  padding: 15px;
+}
+
+.player .player-left ul li {
+  display: inline-block;
+}
+
+.player .player-left ul li .player-img {
+  width: 50px;
+  height: 50px;
+  padding-right: 7px;
+}
+
+.player .player-left ul li .player-img img {
+  width: 100%;
+}
+
+.player .player-left ul li .song .song-title {
+  color: white;
+  font-size: 14px;
+}
+
+.player .player-left ul li .song .author {
+  color: #676868;
+  font-size: 11px;
+}
+
+.player .player-left ul li .fav {
+  color: #676868;
+  font-size: 18px;
 }
