@@ -12,8 +12,14 @@
   clear: both;
 }
 
+.border-bot {
+  height: 2px;
+  background-color: #676868;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -31,17 +37,29 @@ aside nav .logo {
 }
 
 aside nav .logo img {
-  height: 60px;
+  height: 50px;
 }
 
 aside nav ul {
   list-style: none;
+  padding-bottom: 20px;
+  font-size: 12px;
 }
 
 aside nav ul li {
   color: #676868;
-  padding: 10px;
+  padding: 5px 25px;
   cursor: pointer;
+}
+
+aside nav .nav-top {
+  height: calc((100vh - 90px) - 50px);
+}
+
+aside nav .nav-top .menu img {
+  height: 24px;
+  /* filter: invert(.5); */
+  vertical-align: middle;
 }
 
 aside nav ul li.active {
@@ -49,10 +67,65 @@ aside nav ul li.active {
   border-left: 2px solid #B2FF36;
 }
 
+aside nav ul li span {
+  text-transform: uppercase;
+  color: white;
+}
+
+aside nav ul li.plus::before {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: #000;
+  background-color: #676868;
+  padding: 8px 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+aside nav .nav-bottom {
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+  color: #676868;
+}
+
+aside nav .nav-bottom ul {
+  padding-bottom: 0;
+}
+
+aside nav .nav-bottom ul li img.download-app {
+  height: 18px;
+  vertical-align: middle;
+  filter: invert(.5);
+}
+
+aside nav .nav-bottom ul li .border-bot {
+  width: 200px;
+  margin: 10px 0 0 0;
+}
+
+aside nav .nav-bottom ul li img.propic {
+  height: 24px;
+  width: 24px;
+  background-color:#676868;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+aside nav .nav-bottom ul li span.profile-name {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+
+
 main {
   height: calc(100vh - 90px);
   width: calc(100vw - 250px);
-  background-color: teal;
+  background-color: #141923;
   float: left;
   overflow: auto;
 }
@@ -81,7 +154,7 @@ section .button a, section .button a:visited {
   padding: 10px 40px;
 }
 
-footer {
+.player {
   display: flex;
   justify-content: space-between;
   width: 100%;
