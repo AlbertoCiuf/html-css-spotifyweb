@@ -22,6 +22,9 @@ body {
   font-weight: bold;
 }
 
+ul {
+  list-style: none;
+}
 
 /* ASIDE MENU */
 aside {
@@ -41,7 +44,6 @@ aside nav .logo img {
 }
 
 aside nav ul {
-  list-style: none;
   padding-bottom: 20px;
   font-size: 12px;
 }
@@ -58,11 +60,10 @@ aside nav .nav-top {
 
 aside nav .nav-top .menu img {
   height: 24px;
-  /* filter: invert(.5); */
   vertical-align: middle;
 }
 
-aside nav .nav-top ul.playlists li{
+aside nav .nav-top ul.playlists li {
   padding-bottom: 10px;
 }
 
@@ -76,15 +77,12 @@ aside nav ul li span {
   color: white;
 }
 
-aside nav ul li.plus::before {
-  content: "\f067";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+aside nav ul li .fa-plus {
   font-size: 18px;
   color: #000;
   background-color: #676868;
   padding: 8px 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
@@ -169,6 +167,12 @@ section .button a, section .button a:visited {
 
 .player .player-left {
   padding: 15px;
+
+}
+
+.player .player-left ul {
+  display: flex;
+  align-items: center;
 }
 
 .player .player-left ul li {
@@ -187,12 +191,12 @@ section .button a, section .button a:visited {
 
 .player .player-left ul li .song .song-title {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .player .player-left ul li .song .author {
   color: #676868;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .player .player-left ul li .fav {
