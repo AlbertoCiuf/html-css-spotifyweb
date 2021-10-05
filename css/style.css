@@ -252,3 +252,30 @@ section .button a, section .button a:visited {
   width: 20%;
 }
 
+.player .player-right ul li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.player .player-right ul li i {
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.player .player-right .bar {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  margin: 0 10px;
+  background-color:#676868;
+  vertical-align: middle;
+}
+
+.player .player-right .bar.short-bar {
+  position: absolute;
+  left: -10px;
+  background-color: #fff;
+  width: 40%;
+}
