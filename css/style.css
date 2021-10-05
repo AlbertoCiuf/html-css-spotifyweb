@@ -126,7 +126,7 @@ aside nav .nav-bottom ul li span.profile-name {
 
 main {
   height: calc(100vh - 90px);
-  width: calc(100vw - 250px);
+  width: calc(100% - 250px);
   background-color: #141923;
   float: left;
   overflow: auto;
@@ -167,7 +167,6 @@ section .button a, section .button a:visited {
 
 .player .player-left {
   padding: 15px;
-
 }
 
 .player .player-left ul {
@@ -189,6 +188,8 @@ section .button a, section .button a:visited {
   width: 100%;
 }
 
+
+
 .player .player-left ul li .song .song-title {
   color: white;
   font-size: 12px;
@@ -202,4 +203,52 @@ section .button a, section .button a:visited {
 .player .player-left ul li .fav {
   color: #676868;
   font-size: 18px;
+  padding-left: 35px;
+  cursor: pointer;
 }
+
+.player .player-left ul li .fav i {
+  padding-left: 5px;
+}
+
+.player .player-mid {
+ text-align: center;
+}
+
+.player .player-mid .controls ul li {
+  display: inline-block;
+}
+
+.player .player-mid .controls ul li i {
+  color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.player .player-mid .controls ul li i.fa-play-circle {
+  font-size: 28px;
+}
+
+.player .player-mid .player-bar span {
+  color: #fff;
+  font-size: 12px;
+}
+
+.player .player-mid .player-bar .bar {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 3px;
+  margin: 0 10px;
+  background-color:#676868;
+  vertical-align: middle;
+}
+
+.player .player-mid .player-bar .bar.short-bar {
+  position: absolute;
+  left: -10px;
+  background-color: #fff;
+  width: 20%;
+}
+
