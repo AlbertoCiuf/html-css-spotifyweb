@@ -12,17 +12,39 @@
   clear: both;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ASIDE MENU */
 aside {
   height: calc(100vh - 90px);
-  width: 300px;
+  width: 250px;
   background-color:aquamarine;
   float: left;
 }
 
+aside nav .logo {
+  padding: 15px;
+  width: 200px;
+}
+
+aside nav .logo img {
+  height: 50px;
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav ul li {
+  cursor: pointer;
+}
 
 main {
   height: calc(100vh - 90px);
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px);
   background-color: teal;
   float: left;
   overflow: auto;
@@ -30,9 +52,9 @@ main {
 
 section {
   height: 90px;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px);
   position: fixed;
-  background-color: lightgrey;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 section .button {
@@ -40,10 +62,22 @@ section .button {
   flex-direction: row-reverse;
   align-items: center;
   height: 100%;
+  padding: 20px;
+}
+
+section .button a, section .button a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 40px;
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 90px;
-  background-color: grey;
+  background-color: #282828;
 }
