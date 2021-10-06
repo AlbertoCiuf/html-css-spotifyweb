@@ -237,6 +237,7 @@ main .content .row:not(:last-child) {
 }
 
 main .content .card {
+  position: relative;
   width: 12vw;
   height: 12vw;
   flex-shrink: 0;
@@ -245,7 +246,28 @@ main .content .card {
   cursor: pointer;
 }
 
+main .content .card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 50px;
+  width: 11vw;
+  line-height: 11vw;
+  background-color: rgba(0,0,0,.5);
+  visibility: hidden;
+}
+
+main .content .card:hover .overlay {
+  visibility: visible;
+}
+
 main .content .card.rounds img {
+  border-radius: 50%;
+}
+
+main .content .card .overlay.rounds {
   border-radius: 50%;
 }
 
@@ -295,8 +317,6 @@ main .content .card p {
 .player .player-left ul li .player-img img {
   width: 100%;
 }
-
-
 
 .player .player-left ul li .song .song-title {
   color: white;
