@@ -59,6 +59,14 @@ aside nav ul li {
   cursor: pointer;
 }
 
+aside nav ul li:hover {
+  color: white;
+}
+
+aside nav ul li:hover .fa-plus {
+  background-color: #fff;
+}
+
 aside nav .nav-top {
   height: calc(100% - 50px);
   min-height: 570px;
@@ -182,7 +190,7 @@ main .categories {
 }
 
 main .categories li {
-  display: inline-block;
+  flex-shrink: 1;
   padding: 0 10px;
   text-transform: uppercase;
 }
@@ -197,6 +205,10 @@ main .categories li a {
   height: 2px;
   color: #B6FF39;
 } */
+
+main .categories li:hover a {
+  color: white;
+}
 
 main .content {
   padding: 20px;
@@ -227,8 +239,10 @@ main .content .row:not(:last-child) {
 main .content .card {
   width: 12vw;
   height: 12vw;
+  flex-shrink: 0;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 main .content .card.rounds img {
@@ -304,6 +318,8 @@ main .content .card p {
 .player .player-left ul li .fav i {
   padding-left: 5px;
 }
+
+
 
 .player .player-mid {
   width: 40%;
