@@ -584,7 +584,7 @@ section .button {
 
 @media screen and (max-width: 575px) {
 
-  aside nav {
+  aside {
     width: 80px;
     text-align: center;
   }
