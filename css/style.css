@@ -193,13 +193,11 @@ section .button a, section .button a:visited {
   transition: all .3s;
 }
 
-
 main .categories {
   padding-top: 100px;
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 main .categories li {
@@ -506,6 +504,23 @@ main .content .card .card-txt p {
   background-color: #B2FF36;
 }
 
+
+/* MEDIA QUERY PARTE RESPONSIVE */
+
+/*md*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   
+  main .content .row {
+    flex-wrap: wrap;
+  }
+
+  main .content .card {
+    width: calc(100% / 4);
+  }
+
+  main .categories {
+  flex-wrap: wrap;
+  }
 }
+
+
