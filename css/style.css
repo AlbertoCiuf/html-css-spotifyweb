@@ -532,12 +532,13 @@ section .button {
   font-size: 12px;
   }
 
-  main .content .row {
-    flex-wrap: wrap;
-  }
-
   main .content .card {
     width: calc(100% / 4);
+  }
+
+  /*bonus album che scompaiono anziché wrappare*/
+  main .content .card:nth-child(5), main .content .card:nth-child(6) {
+    display: none;
   }
 
   main .categories {
@@ -556,6 +557,11 @@ section .button {
   
   main .content .card {
     width: 50%;
+  }
+
+  /*bonus album che scompaiono anziché wrappare*/
+  main .content .card:nth-child(3), main .content .card:nth-child(4) {
+    display: none;
   }
 
   .player .player-mid .controls ul li i, .player .player-right ul li i{
@@ -620,9 +626,9 @@ section .button {
 }
 
 
-/*far sparire call to action*/
+/*bonus far sparire call to action*/
 
-@media screen and (max-height: 184px) {
+@media screen and (max-height: 185px) {
 
   main section {
     display: none;
