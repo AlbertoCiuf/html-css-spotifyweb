@@ -55,9 +55,18 @@ aside nav .logo img {
   height: 50px;
 }
 
+#small-logo {
+  display: none;
+}
+
 aside nav ul {
   padding-bottom: 20px;
   font-size: 16px;
+}
+
+aside nav ul li .menu-text {
+  text-transform: none;
+  color: #676868;
 }
 
 aside nav ul li {
@@ -66,7 +75,7 @@ aside nav ul li {
   cursor: pointer;
 }
 
-aside nav ul li:hover {
+aside nav ul li:hover, aside nav ul li:hover .menu-text {
   color: white;
 }
 
@@ -541,4 +550,41 @@ section .button {
     width: 50%;
   }
   
+}
+
+/*mobile*/
+
+@media screen and (max-width: 575px) {
+
+  aside nav {
+    width: 80px;
+    text-align: center;
+  }
+
+  main, main section {
+  width: calc(100% - 80px);
+  }
+
+  #small-logo {
+    display: block;
+    height: 34px;
+    padding-left: 10px;
+  }
+  
+  aside nav .nav-bottom ul li img.download-app {
+    height: 18px;
+    width: 18px;
+  }
+  
+  #big-logo, .menu-text, .playlists-management, .playlists, .profile-name, .border-bot{
+    display: none;
+  }
+
+  aside nav ul li.active {
+    border: none;
+  }
+
+  aside nav .nav-top .menu img {
+    height: 34px;
+  }
 }
