@@ -30,6 +30,11 @@ ul {
   list-style: none;
 }
 
+.container {
+  height: calc(100vh - 90px);
+  width: 100%;
+}
+
 /* ASIDE MENU */
 aside nav {
   display: flex;
@@ -149,7 +154,7 @@ aside nav .nav-bottom ul li span.profile-name {
 /* MAIN CONTENT */
 
 main {
-  height: calc(100vh - 90px);
+  height: 100%;
   width: calc(100% - 250px);
   background-color: #141923;
   float: left;
@@ -313,7 +318,7 @@ main .content .card .card-txt p {
 
 .player .player-left{
   padding: 15px;
-  width: 300px;
+  max-width: 300px;
 }
 
 .player .player-left ul {
@@ -361,28 +366,45 @@ main .content .card .card-txt p {
 }
 
 .player .player-mid {
+  display: flex;
+  flex-direction: column;
   width: 40%;
+  /* height: 100%; */
+  align-items: center;
   text-align: center;
+}
+
+.player .player-mid .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .player .player-mid .controls ul li {
   display: inline-block;
 }
 
-.player .player-mid .controls ul li i {
+.player .player-mid .controls i {
   color: #fff;
   font-size: 20px;
   padding: 5px;
   cursor: pointer;
 }
 
-.player .player-mid .controls ul li i.fa-play-circle {
+.player .player-mid .controls i.fa-play-circle {
   font-size: 30px;
   transition: all .3s;
 }
 
-.player .player-mid .controls ul li i.fa-play-circle:hover {
+.player .player-mid .controls i.fa-play-circle:hover {
   transform: scale(1.3);
+}
+
+.player .player-mid .player-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .player .player-mid .player-bar span {
@@ -393,7 +415,7 @@ main .content .card .card-txt p {
 .player .player-mid .player-bar .bar {
   position: relative;
   display: inline-block;
-  width: 300px;
+  width: 100%;
   height: 3px;
   margin: 0 10px;
   background-color:#676868;
@@ -405,12 +427,13 @@ main .content .card .card-txt p {
   left: -10px;
   background-color: #fff;
   width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .player .player-mid .player-bar .bar.short-bar .handle {
   position: absolute;
-  top: -5px;
-  left: 50px;
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -429,8 +452,9 @@ main .content .card .card-txt p {
 }
 
 .player .player-right {
-  width: 300px;
-  text-align: right;
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
 }
 
 .player .player-right ul li {
@@ -480,4 +504,8 @@ main .content .card .card-txt p {
 
 .player .player-right .bar:hover .bar.short-bar {
   background-color: #B2FF36;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
 }
