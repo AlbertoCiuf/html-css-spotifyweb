@@ -175,6 +175,7 @@ section .button {
   display:flex;
   justify-content: flex-end;
   padding: 20px;
+  /* font-size: 1.2vw; */
 }
 
 
@@ -303,7 +304,7 @@ main .content .card .card-txt h4 {
 
 main .content .card .card-txt p {
   color: #676868;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .player {
@@ -510,6 +511,10 @@ main .content .card .card-txt p {
 /*md*/
 @media screen and (max-width: 991px) {
   
+section .button {
+  font-size: 12px;
+  }
+
   main .content .row {
     flex-wrap: wrap;
   }
@@ -526,3 +531,14 @@ main .content .card .card-txt p {
 
 /*sm*/
 
+@media  screen and (max-width: 767px) {
+
+  section .button {
+    font-size: 10px;
+    }
+  
+  main .content .card {
+    width: 50%;
+  }
+  
+}
