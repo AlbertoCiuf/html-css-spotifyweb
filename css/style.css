@@ -35,14 +35,21 @@ ul {
   width: 100%;
 }
 
+aside, main {
+  float: left;
+}
+
 /* ASIDE MENU */
-aside nav {
-  display: flex;
-  flex-direction: column;
+aside {
   height: calc(100vh - 90px);
   width: 250px;
+}
+
+aside nav {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
   background-color:#000;
-  float: left;
   overflow: hidden;
 }
 
@@ -104,7 +111,6 @@ aside nav .nav-top ul.playlists li {
 }
 
 aside nav ul li.active {
-  color: white;
   border-left: 2px solid #B2FF36;
 }
 
@@ -126,7 +132,7 @@ aside nav ul li .fa-plus {
 aside nav .nav-bottom {
   display: flex;
   flex-direction: column;
-  height: 83px;
+  height: 90px;
   color: #676868;
 }
 
@@ -166,7 +172,6 @@ main {
   height: 100%;
   width: calc(100% - 250px);
   background-color: #141923;
-  float: left;
   overflow: auto;
 }
 
@@ -327,6 +332,7 @@ main .content .card .card-txt p {
 .player .player-left{
   padding: 15px;
   max-width: 300px;
+  /* flex-shrink: 0; */
 }
 
 .player .player-left ul {
@@ -377,15 +383,16 @@ main .content .card .card-txt p {
   display: flex;
   flex-direction: column;
   width: 40%;
-  /* height: 100%; */
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .player .player-mid .controls {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-shrink: 0; */
 }
 
 .player .player-mid .controls ul li {
@@ -460,9 +467,10 @@ main .content .card .card-txt p {
 }
 
 .player .player-right {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: space-around; */
   max-width: 300px;
+  flex-shrink: 0;
 }
 
 .player .player-right ul li {
@@ -471,7 +479,6 @@ main .content .card .card-txt p {
 }
 
 .player .player-right ul li i {
-  font-size: 16px;
   color: #fff;
   cursor: pointer;
 }
@@ -491,12 +498,13 @@ main .content .card .card-txt p {
   left: -10px;
   background-color: #fff;
   width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .player .player-right .bar.short-bar .handle {
   position: absolute;
-  top: -5px;
-  left: 32px;
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -549,6 +557,26 @@ section .button {
   main .content .card {
     width: 50%;
   }
+
+  .player .player-mid .controls ul li i, .player .player-right ul li i{
+    font-size: 12px;
+  }
+
+  .player .player-mid .player-bar span {
+    font-size: 10px;
+  }
+
+  .player .player-right ul li {
+    padding: 2px;
+  }
+
+  .player .player-mid .controls i.fa-play-circle {
+    font-size: 22px;
+  }
+
+  .player .player-right .bar {
+    width: 70px;
+  }
   
 }
 
@@ -587,4 +615,17 @@ section .button {
   aside nav .nav-top .menu img {
     height: 34px;
   }
+
+  
+}
+
+
+/*far sparire call to action*/
+
+@media screen and (max-height: 184px) {
+
+  main section {
+    display: none;
+  }
+  
 }
