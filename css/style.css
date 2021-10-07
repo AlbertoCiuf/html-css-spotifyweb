@@ -167,11 +167,15 @@ section {
 }
 
 section .button {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  height: 100%;
+  display:flex;
+  justify-content: flex-end;
   padding: 20px;
+}
+
+
+section .button a:hover {
+  transform: scale(1.1);
+  margin-right: 10px;
 }
 
 section .button a, section .button a:visited {
@@ -181,6 +185,7 @@ section .button a, section .button a:visited {
   border: 2px solid white;
   border-radius: 50px;
   padding: 10px 40px;
+  transition: all .3s;
 }
 
 
@@ -193,26 +198,19 @@ main .categories {
 }
 
 main .categories li {
-  flex-shrink: 1;
   padding: 0 10px;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 main .categories li a {
   color: #676868;
 }
 
-main .categories li:first-child {
-  position: relative;
-}
-
 main .categories li .active-border {
-  position: absolute;
-  bottom: -5px;
-  left: 50px;
-  text-align: center;
-  width: 40px;
-  height: 3px;
+  margin: 0 auto;
+  width: 30px;
+  height: 2px;
   background-color:#B2FF36;
 }
 
@@ -239,15 +237,14 @@ main .content p {
 
 main .content .row {
   display: flex;
-  flex-wrap: wrap;
 }
 
 main .content .row:not(:last-child) {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 main .content .card {
-  width: 12vw;
+  width: calc(100% / 6);
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -267,18 +264,19 @@ main .content .card .card-img .overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.5);
-  display: none;
-}
-
-main .content .card:hover .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: all .3s;
+}
+
+main .content .card:hover .overlay {
+  opacity: 1;
 }
 
 main .content .card-img.rounds img {
   border-radius: 50%;
-  display: block;
 }
 
 main .content .card .card-img .overlay.rounds {
@@ -354,6 +352,10 @@ main .content .card .card-txt p {
   cursor: pointer;
 }
 
+.player .player-left ul li .fav i.fa-heart:hover, .player .player-left ul li .fav i.fa-folder:hover  {
+  color: white;
+}
+
 .player .player-left ul li .fav i {
   padding-left: 5px;
 }
@@ -375,7 +377,12 @@ main .content .card .card-txt p {
 }
 
 .player .player-mid .controls ul li i.fa-play-circle {
-  font-size: 32px;
+  font-size: 30px;
+  transition: all .3s;
+}
+
+.player .player-mid .controls ul li i.fa-play-circle:hover {
+  transform: scale(1.3);
 }
 
 .player .player-mid .player-bar span {
@@ -398,6 +405,27 @@ main .content .card .card-txt p {
   left: -10px;
   background-color: #fff;
   width: 20%;
+}
+
+.player .player-mid .player-bar .bar.short-bar .handle {
+  position: absolute;
+  top: -5px;
+  left: 50px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.player .player-mid .player-bar .bar:hover .handle {
+  opacity: 1;
+}
+
+.player .player-mid .player-bar .bar:hover .bar.short-bar {
+  background-color: #B2FF36;
 }
 
 .player .player-right {
@@ -433,3 +461,23 @@ main .content .card .card-txt p {
   width: 40%;
 }
 
+.player .player-right .bar.short-bar .handle {
+  position: absolute;
+  top: -5px;
+  left: 32px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.player .player-right .bar:hover .handle {
+  opacity: 1;
+}
+
+.player .player-right .bar:hover .bar.short-bar {
+  background-color: #B2FF36;
+}
