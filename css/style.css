@@ -96,7 +96,7 @@ aside nav ul li:hover .fa-plus {
 aside nav .nav-top {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 83px);
+  height: calc(100% - 90px);
   min-height: 420px;
 }
 
